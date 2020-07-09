@@ -1,0 +1,56 @@
+<div class="container" style="margin-top: 70px;">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Ano</th>
+                <th>Descrição</th>
+                <th>Alterar</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let carros of carros">
+                <td>{{carros.id}}</td>
+                <td>{{carros.marca}}</td>
+                <td>{{carros.modelo}}</td>
+                <td>{{carros.ano}}</td>
+                <td>{{carros.descricao}}</td>
+                 
+                <td>
+                    <button class="btn btn-warning" (click)="selectedCarro()">Alterar</button>
+                </td>
+                <td>
+                  <button class="btn btn-danger" (click)="deleteCarro(carros.id)">Excluir</button>
+              </td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="card text-center" *ngIf="selectedCarro">
+        <div class="card-header">
+          # {{selectedCarro.id}}
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">{{selectedCarro.Nome}}</h4>
+        <p class="card-text">
+            {{selectedCarro.descricao}}
+          </p>    
+        </div>
+  
+      </div>
+
+
+
+      <div class="container">
+        
+        
+      
+
+
+</div>
